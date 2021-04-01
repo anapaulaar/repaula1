@@ -1,5 +1,7 @@
-const soma = require('./calculadora');
+const calcular = require('./calculadora');
 
-soma(10, 40);
+console.log(calcular().soma(10, 20));
+
+console.log(calcular().subtrair(50, 20));
 
 console.log("ola minha casa");
