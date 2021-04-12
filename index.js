@@ -1,6 +1,6 @@
 const calcular = require('./calculadora');
 
-const exemp = require('./exemplos');
+//const exemp = require('./exemplos');
 
 console.log(calcular().soma(10, 20));
 
