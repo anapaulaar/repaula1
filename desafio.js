@@ -1,6 +1,6 @@
 const nodemon = require("nodemon")
 
-var usuario = [
+var usuarios = [
     {
         nome: 'ana',
         email: 'ana@gmail.com',
@@ -39,8 +39,36 @@ var usuario = [
     }
 ]
 
-console.log(usuario)
+var clientes = [
+    {
+        nome: 'Amanda',
+        email: 'ma@gmail.com',
+        idade: 25,
+        ativo: false
+    },
+    {
+        nome: 'Edu',
+        email: 'dudu@gmail.com',
+        idade: 27,
+        ativo: false
+    },
+    {
+        nome: 'Vic',
+        email: 'vic@gmail.com',
+        idade: 22,
+        ativo: true
+    },
 
-const lista = usuario.filter((user) => user.ativo === true)
-console.log("Os usuários ativos são:")
-console.log(lista)
+]
+
+console.log(usuarios)
+
+function listarUsuarios (todosUsuarios) {
+    return todosUsuarios.filter(user => user.ativo === true)
+}
+
+listarUsuarios(usuarios)
+    .forEach(user => console.log(`Usuário ativos: ${user.nome}`))
+
+listarUsuarios(clientes)
+    .forEach(user => console.log(`Cliente ativo: ${user.nome}`))
